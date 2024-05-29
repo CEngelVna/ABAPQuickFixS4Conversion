@@ -7,6 +7,7 @@ import org.eclipse.jface.text.quickassist.IQuickAssistInvocationContext;
 import com.abapblog.adt.quickfix.IFixAppender;
 import com.abapblog.adt.quickfix.assist.syntax.statements.StatementAssist;
 
+import de.leuc.adt.quickfix.DDICChange;
 import de.leuc.adt.quickfix.move.MoveCorresponding;
 import de.leuc.adt.quickfix.select.SelectNewStyle;
 import de.leuc.adt.quickfix.select.SelectSingle;
@@ -21,6 +22,7 @@ public class FixAppender implements IFixAppender {
         list.add(new SelectSingleNewStyle());
         list.add(new SelectNewStyle());
         list.add(new MoveCorresponding());
+        list.add(new DDICChange());
         return list;
     }
 }
